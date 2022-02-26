@@ -1,0 +1,46 @@
+/* make a pintrest board */
+
+.containers{
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+body {
+	/* height: 100vh; */
+	background-color: #1a202c;
+
+	/* -webkit-font-smoothing: antialiased; */
+	/* -moz-osx-font-smoothing: grayscale; */
+	
+}
+
+.pin{
+  
+    border-radius: 16px;
+    background-color: #ffffff;
+    margin: 15px 10px;
+    background-color: red;
+    background-color: #1a202c;
+    
+
+
+}
+
+
+.pin.small{
+    object-fit: contain;
+    grid-row-end: span 26;
+}
+
+.pin.medium{
+    object-fit: contain;
+    grid-row-end: span 33;
+}
+    
+.pin.large{
+  object-fit: contain;
+    grid-row-end: span 45;
+}
