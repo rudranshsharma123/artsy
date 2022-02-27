@@ -1,46 +1,36 @@
-/* make a pintrest board */
-
-.containers{
-
-    align-items: center;
-    justify-content: center;
-}
-
-
-
-body {
-	/* height: 100vh; */
-	background-color: #1a202c;
-
-	/* -webkit-font-smoothing: antialiased; */
-	/* -moz-osx-font-smoothing: grayscale; */
-	
-}
-
-.pin{
-  
-    border-radius: 16px;
-    background-color: #ffffff;
-    margin: 15px 10px;
-    background-color: red;
-    background-color: #1a202c;
-    
-
+#nav {
+	height: 50px;
+    width: 5vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 
 }
 
-
-.pin.small{
-    object-fit: contain;
-    grid-row-end: span 26;
+#nav-links {
+	display: flex;
+	list-style: none;
+	margin-right: 20px;
+	margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+	padding: 1px;
+	color: white;
+	font-weight: bold;
+    font-size: 30px;
+    font-family: monospace;
 }
 
-.pin.medium{
-    object-fit: contain;
-    grid-row-end: span 33;
+#nav-links-deso{
+ color: white;
+	font-weight: bold;
+    font-size: small;
+       font-family: monospace;
 }
-    
-.pin.large{
-  object-fit: contain;
-    grid-row-end: span 45;
+#buttons {
+	background: linear-gradient(135deg, #6699ff 0%, #ff3366 100%);
+    color: azure;
+    height: 60px !important;
+    width: 80px !important;
+    align-items: right;
 }

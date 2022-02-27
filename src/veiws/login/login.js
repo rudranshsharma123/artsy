@@ -38,15 +38,15 @@ function Login(props) {
 		<div>
 			<div id="heading-container">
 				<p id="heading">
-					Welcome to the <span id="text">App</span>
+					Welcome to <span id="text">Artsy</span>
 				</p>
 
 				<div id="button-container">
-					<button
-						onClick={(e) => {
-							e.preventDefault();
-							dispatch(connect());
-						}}
+					<button onClick={handlePageChange}
+						// onClick={(e) => {
+						// 	e.preventDefault();
+						// 	dispatch(connect());
+						// }}
 						id="button">
 						<p id="login-text">Login</p>
 					</button>
@@ -90,12 +90,12 @@ function Login(props) {
 				{" "}
 				{publicKey && (
 					<div>
-						Hello, you are logged in{" "}
-						<button onClick={handlePageChange}>click me</button> to procceed{" "}
-						<div style={{ margin: "10px", padding: "10px" }}>
+						Hello, you are logged in. Click the Login button to continue!{" "}
+						{/* <button onClick={handlePageChange}>click me</button> to procceed{" "} */}
+						<div style={{ margin: "1px", padding: "1px" }}>
 							This is your publicKey <span id="text">{publicKey} </span>
 							<br></br>
-							<p>If this is not your account click on login again!</p>
+							<p>If this is not your account click on Connect again!</p>
 						</div>
 					</div>
 				)}

@@ -1,18 +1,20 @@
-
 import "./App.css";
-
+import {} from "@mui/material";
+import {
+  Add,
+  Chat,
+  FavoriteRounded,
+  Notifications,
+  Person,
+  QuestionMark,
+} from "@mui/icons-material";
 import MenuContainer from "./Components/MenuContainer";
 import { useEffect } from "react";
 import Pin from "./Components/Pin";
 
-import "./styles.css";
-import { connect } from "../../redux/actions";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import Data from "./Components/Data";
 
 function App() {
-  
   useEffect(() => {
     const allIcon = document.querySelectorAll(".iconContainer");
 
@@ -23,50 +25,36 @@ function App() {
 
     allIcon.forEach((n) => n.addEventListener("click", setMenuActive));
   }, []);
-  const dispatch = useDispatch();
-	const navigate = useNavigate();
-	const deso = useSelector((state) => state.deso);
-	console.log(deso);
-	useEffect(() => {
-		if (deso.publicKey === "" || deso.publicKey === null) {
-			dispatch(connect());
-		}
-	}, []);
-	const handlePageChange = () => {
-		navigate("/user");
-	};
+
   return (
     <div className="App">
-        <nav id="nav">
-    <div id="nav-links">AppName</div>
-    <div id="nav-links-deso">{deso.publicKey}</div>
-    <button id="buttons" onClick={handlePageChange}>
-      Profile
-    </button>
-  </nav>
       <div className="menuContainer">
-       
+        <img
+          src="https://i.pinimg.com/originals/f9/df/f1/f9dff1de5ec481b7a2c4dfa24d8479c9.gif"
+          alt=""
+          className="logo"
+        />
 
         <div className="subMenu">
           <div>
-            {/* <MenuContainer icon={<Person />} />
+            <MenuContainer icon={<Person />} />
             <MenuContainer icon={<Notifications />} />
-            <MenuContainer icon={<Chat />} /> */}
+            <MenuContainer icon={<Chat />} />
           </div>
 
           <div>
-            {/* <MenuContainer icon={<FavoriteRounded />} /> */}
+            <MenuContainer icon={<FavoriteRounded />} />
           </div>
 
           <div>
-            {/* <MenuContainer icon={<QuestionMark />} />
-            <MenuContainer icon={<Add />} /> */}
+            <MenuContainer icon={<QuestionMark />} />
+            <MenuContainer icon={<Add />} />
           </div>
         </div>
       </div>
 
       <main>
-        {/* <div className="searchBox">
+        <div className="searchBox">
           <input type="text" placeholder="Search" />
           <div className="search">
             <img
@@ -74,7 +62,7 @@ function App() {
               alt=""
             />
           </div>
-        </div> */}
+        </div>
 
         <div className="mainContainer">
           {Data &&
@@ -92,6 +80,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;
