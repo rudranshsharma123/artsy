@@ -4,7 +4,7 @@ import { connect } from "../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-function Navbar(props) {
+function Navbar({ isHome }) {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 	const deso = useSelector((state) => state.deso);
@@ -15,6 +15,10 @@ function Navbar(props) {
 		}
 	}, []);
 	const handlePageChange = () => {
+		if (isHome) {
+			navigate("/");
+			return;
+		}
 		navigate("/user");
 	};
 
@@ -23,7 +27,7 @@ function Navbar(props) {
 			<div id="nav-links">AppName</div>
 			<div id="nav-links-deso">{deso.publicKey}</div>
 			<button id="buttons" onClick={handlePageChange}>
-				Profile
+				{isHome ? "Home" : "Profile"}
 			</button>
 		</nav>
 	);
