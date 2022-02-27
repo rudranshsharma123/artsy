@@ -9,6 +9,7 @@ import Discover from "./veiws/discover/discover";
 import User from "./veiws/user/user";
 import store from "./redux/store";
 import { Provider } from "react-redux";
+import ArtGen from "./veiws/generate/artGen";
 
 ReactDOM.render(
 	<Provider store={store}>
@@ -17,6 +18,7 @@ ReactDOM.render(
 				<Route path="/" element={<Login />} />
 				<Route path="/discover" element={<Discover />} />
 				<Route path="/user" element={<User />} />
+				<Route path="/gen" element={<ArtGen />} />
 			</Routes>
 		</BrowserRouter>
 	</Provider>,
